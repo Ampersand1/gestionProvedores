@@ -1,36 +1,36 @@
 const mongoose = require("mongoose");
 const proveedorSchema = mongoose.Schema({
-    Tipo_Organizacion: {
+    tipo_organizacion: {
         //natural(1)-juridica(0)
         type: Boolean,
         required: false,
     },
-    Nombre: {
+    nombre: {
         //nombre del proveedor
         type: String,
         required: true,
     },
-    Nombre_Comercial: {
+    nombre_comercial: {
         type: String,
         required: false,
     },
-    Codigo: {
-        //codigo dado por el admin al proveedor
-        type: String,
-        required: false,
-    },
-    Numero_Identificacion: {
+    numero_identificacion: {
         //CC del proveedor
         type: String,
         required: true,
     },
-    Correo: {
+    telefono: {
+        //codigo dado por el admin al proveedor
+        type: String,
+        required: false,
+    },
+    correo: {
         type: String,
         required: true,
     },
-    Pais: {
+    pais: {
         type: String,
         required: true,
     }
 });
-module.exports = mongoose.model("Proveedor", proveedorSchema);
+module.exports = mongoose.model("proveedor", proveedorSchema);
